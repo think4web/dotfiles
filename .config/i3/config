@@ -339,6 +339,9 @@ bindsym $mod+y fullscreen disable; floating enable;
 
 ### Autostart programs
 
+# SSH Agent
+exec_always --no-startup-id eval $(ssh-agent) &
+
 # Network Manager
 exec_always --no-startup-id nm-applet &
 
@@ -351,7 +354,6 @@ exec_always --no-startup-id xinput set-int-prop 11 'Device Enabled' 8 0 &
 # Switch keyboard layout and remember layout for each window
 exec_always kbdd & setxkbmap -option 'grp:alt_shift_toggle' -layout us,ru &
 
-# Notifications
 exec_always --no-startup-id dunst &
 
 exec_always --no-startup-id compton -f --vsync drm &
