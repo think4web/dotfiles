@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# Execute the command Ping and learn the value.
+
+PING=$(echo "google.com" | shuf -n 1 | xargs fping -e | grep -oP '\(\K[^\)]+')
+
+# We learn the status of ping and availability of connection.
+
+STATUS=`ping 8.8.8.8 -c 1 -w 3 | grep " 1 received"`
+
+if [[ -z "$STATUS" ]]; then
+  echo "Offline" # short text
+  echo "Offline" # full text
+else
+  echo  $PING # short text
+  echo  $PING # full text
+fi
+
+## Colors
+# Depending on the value of the ping, we change the color.
+
+PINGC=$($PING | awk '{print $1}')
+
+if [[ -z "$STATUS" ]]; then
+    echo "#FF0000"
+elif  [[(($PING -le 100))]]; then
+      echo "#DCDCDC"
+elif  [[(($PING -ge 100))]]; then
+      echo "#FFFC00"
+elif  [[(($PING -ge 200))]]; then
+    echo "#FFAE00"
+fi
+
+#if [[ -z "$STATUS" ]]; then
+#    echo "#FF0000"
+#elif  [[(($PING -le 100))]]; then
+#      echo "#DCDCDC"
+#elif  [[(($PING -ge 100))]]; then
+#      echo "#FFFC00"
+#elif  [[(($PING -ge 200))]]; then
+#    echo "#FF0000"
+#fi
