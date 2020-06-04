@@ -1,0 +1,93 @@
+! ------------------------------------------------------------------------------
+! All Color theme
+! ------------------------------------------------------------------------------
+
+! special
+*.foreground:   #DCDCDC
+*.background:   #2D2D2D
+*.cursorColor:  #DCDCDC
+
+! black
+*.color0:       #1d1f21
+*.color8:       #969896
+
+! red
+*.color1:       #cc342b
+*.color9:       #cc342b
+
+! green
+*.color2:       #198844
+*.color10:      #198844
+
+! yellow
+*.color3:       #fba922
+*.color11:      #fba922
+
+! blue
+*.color4:       #3971ed
+*.color12:      #3971ed
+
+! magenta
+*.color5:       #a36ac7
+*.color13:      #a36ac7
+
+! cyan
+*.color6:       #0f73fb
+*.color14:      #0f73fb
+
+! white
+*.color7:       #c5c8c6
+*.color15:      #ffffff
+
+! ------------------------------------------------------------------------------
+! XTerm Color theme
+! ------------------------------------------------------------------------------
+
+XTerm.termName: xterm-256color
+XTerm.vt100.locale: true
+XTerm.vt100.faceName: xft:Droid Sans Mono:antialias=true:size=12
+XTerm.vt100.font: Droid Sans Mono:size=12
+
+XTerm*font: -misc-fixed-medium-r-normal--18-120-100-100-c-90-iso10646-1
+
+Xterm*BorderWidth: 1
+! Небольшой отступ от краев окна для лучшего восприятия
+XTerm*internalBorder: 10
+xterm*BorderColor: #535353
+
+! отключаем жирный шрифт и вместо него делаем текст синим.
+!XTerm.vt100.colorBDMode: true
+!XTerm.vt100.colorBD: rgb:82/a4/d3
+! отключаем подчеркнутый текст и вместо него делаем его белым.
+!XTerm.vt100.colorULMode: true
+!XTerm.vt100.colorUL: rgb:e4/e4/e4
+! аналогично использовать colorIT для курсива
+!XTerm*keepSelection:   true
+!XTerm*bellIsUrgent: true
+!XTerm*dynamicColors: on
+
+XTerm*saveLines: 15000
+
+XTerm*cursorColor: darkgreen
+XTerm*jumpScroll: true
+XTerm*multiScroll: true
+XTerm*geometry: 400x200
+XTerm.vt100.bellIsUrgent: true
+XTerm*saveLines: 15000
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+!                 'background', 'border', 'separator'
+rofi.color-window: #2D2D2D, #d8dee9, #2D2D2D
+rofi.color-normal: #2D2D2D, #d8dee9, #2D2D2D, #d8dee9, #2D2D2D
+rofi.color-active: #2D2D2D, #2D2D2D, #2D2D2D, #2D2D2D, #d8dee9
+rofi.color-urgent: #2D2D2D, #ec5f67, #2D2D2D, #ec5f67, #d8dee9
+
+!rofi.separator-style: solid
+!rofi.sidebar-mode:    true
+rofi.padding:         20
+rofi.bw:              1
+rofi.scrollbar-width: 0
+!rofi.line-margin:     0
