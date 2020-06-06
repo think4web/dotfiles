@@ -87,7 +87,8 @@ bindsym $mod+d exec "layout=$(xkb-switchi -p); xkb-switch -s us; rofi -show run 
 
 # Start a power management script.
 #bindsym $mod+Pause mode "$mode_system"
-bindsym $mod+F4 exec /home/faust/.config/i3/scripts/power.sh
+#bindsym $mod+F4 exec /home/faust/.config/i3/scripts/power.sh
+bindsym $mod+F4 exec /home/faust/.config/i3/scripts/rofi-power
 
 # Change focus
 bindsym $mod+j focus left

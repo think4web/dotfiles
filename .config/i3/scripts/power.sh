@@ -13,7 +13,7 @@
 
 #chosen=$(echo -e "[Cancel]\nLogout\nShutdown\nReboot\nSuspend\nHibernate\nHybrid-sleep\nSuspend-then-hibernate" | rofi -dmenu -i)
 
-chosen=$(echo "Logout\nShutdown\nReboot" | rofi -width 30  -lines 3 -dmenu -i -p Power)
+chosen=$(echo "Logout\n Shutdown\n Reboot" | rofi -width 30  -lines 3 -dmenu -i -p Power)
 # Info about some states are available here:
 # https://www.freedesktop.org/software/systemd/man/systemd-sleep.conf.html#Description
 
