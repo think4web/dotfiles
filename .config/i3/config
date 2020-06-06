@@ -222,7 +222,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+x exec i3-msg exit
 
 #bindsym $mod+F2 exec i3lock
-bindsym $mod+F2 exec ~/.config/i3/scripts/lock
+bindsym $mod+F2 exec ~/.local/bin/lock
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -360,7 +360,6 @@ exec_always --no-startup-id dunst &
 exec_always --no-startup-id compton -f --vsync drm &
 
 exec_always --no-startup-id feh --bg-scale $wallpaper &
-#exec_always --no-startup-id feh --bg-scale $wallpaper &
 
 exec_always --no-startup-id google-drive-ocamlfuse -o nonempty ~/Google\ Drive/ &
 
@@ -368,11 +367,10 @@ exec_always --no-startup-id google-drive-ocamlfuse -o nonempty ~/Google\ Drive/ 
 
 exec_always --no-startup-id udisks-glue -f &
 
-exec --no-startup-id sleep 3 && enpass &
-
 exec --no-startup-id sleep 3 && telegram-desktop &
 exec --no-startup-id sleep 3 && skypeforlinux &
 exec --no-startup-id sleep 3 && thunderbird &
 exec --no-startup-id sleep 3 && joplin &
 #exec --no-startup-id sleep 3 && toptracker &
-exec --no-startup-id sleep 3 && upwork
+exec --no-startup-id sleep 3 && upwork &
+exec --no-startup-id sleep 15 && enpass
