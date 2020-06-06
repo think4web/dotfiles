@@ -1,17 +1,15 @@
+#sudo systemctl restart acpid.service
 
-#!/bin/bash
-
-#set variables
-
-#Check lid state (return 0 if closed)
-check_lid () {
- grep -q closed /proc/acpi/button/lid/*/state
-}
-
-#Lock screen without sleep
-check_lid
-if [ $? = 0 ]
-then
-        DISPLAY=:0.0 su faust -c /home/faust/.local/bin/lock
-        systemctl suspend
+grep -q closed /proc/acpi/button/lid/*/state
+if [ $? = 0 ]; then
+ lid_closed=1
+ echo "Lid Closed"
+ DISPLAY=:0.0 su faust -c 'sh /home/faust/.local/bin/lock'
+ sleep 1
+ systemctl  suspend
+else
+ lid_closed=0
+ echo "Lid Open"
 fi
+
+exit
