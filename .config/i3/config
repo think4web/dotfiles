@@ -302,10 +302,10 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightnes
 bindsym XF86TouchpadToggle exec /etc/acpi/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
-bindsym Alt_L+Down exec "mpc toggle"
-bindsym Alt_L+Up exec "mpc stop"
-bindsym Alt_L+Right exec "mpc next"
-bindsym Alt_L+Left exec "mpc prev"
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioStop exec mpc stop
+bindsym XF86AudioNext exec mpc next
+bindsym XF86AudioPrev exec mpc prev
 
 # Выключение, перезагрузка, блокировка экрана
 set $Locker i3lock && sleep 1
