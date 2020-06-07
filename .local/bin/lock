@@ -3,12 +3,12 @@
 icon="$HOME/.config/i3/scripts/debian.png"
 tmpbg='/tmp/screen.png'
 
-(( $# )) && { icon=$1; }
+#(( $# )) && { icon=$1; }
 
 scrot -z "$tmpbg"
 convert "$tmpbg" -blur 0x7 "$tmpbg"
 convert "$tmpbg" "$icon" -gravity center -composite "$tmpbg"
 #convert "$tmpbg" "$icon" -gravity center -composite -matte "$tmpbg"
-i3lock -u -i "$tmpbg" --nofork
+i3lock -u -i "$tmpbg" --nofork &
 #i3lock --nofork -u -i "$tmpbg"
 #i3lock -u -i "$tmpbg"
