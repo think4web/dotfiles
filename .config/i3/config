@@ -223,7 +223,7 @@ bindsym $mod+Shift+r restart
 #bindsym $mod+x exec i3-msg exit
 
 #bindsym $mod+F2 exec i3lock
-bindsym $mod+F2 exec ~/.local/bin/lock
+bindsym $mod+F2 exec ~/.bin/lock
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -356,7 +356,7 @@ exec_always --no-startup-id xinput set-int-prop 11 'Device Enabled' 8 0 &
 # Switch keyboard layout and remember layout for each window. kbdd - remembers the layout for each window
 exec_always kbdd & setxkbmap -option 'grp:alt_shift_toggle' -layout us,ru &
 
-exec_always --no-startup-id dunst &
+#exec_always --no-startup-id dunst &
 
 exec_always --no-startup-id compton -f --vsync drm &
 
