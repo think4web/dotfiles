@@ -9,7 +9,7 @@
 
 ![i3blocks](https://raw.githubusercontent.com/think4web/dotfiles/master/.config/i3/i3blocks.png)
 
-To lock when closing the laptop, I used [this](https://github.com/cytopia/i3-utils-systemd) utility.
+To lock when closing the laptop, I used [this](https://github.com/cytopia/i3-utils-systemd) utility. I changed it a little for my i3lock script
 
 ### ACPI
 
